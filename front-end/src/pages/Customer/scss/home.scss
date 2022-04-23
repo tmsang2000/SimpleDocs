@@ -1,0 +1,300 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../../fonts/Montserrat/Montserrat-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+#customerhome {
+    font-family: 'Montserrat';
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0);
+    display: flex;
+    padding: 4vh;
+    padding-top: 0px;
+    margin: 0px;
+    flex-direction: column;
+    .section-1 {
+      flex: 2;
+      background-color: rgba($color: #000000, $alpha: 0);
+      display: flex;
+      flex-direction: column;
+      .sc1 {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        .wrapper {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: calc(1vw + 1vh);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4B5FF7;
+            .doc {
+                color: black;
+            }
+            .customer {
+              font-weight: bold;
+            }
+        }
+      }
+      .sc2 {
+        flex: 1;
+        position: relative;
+        background-color: white ;
+        border-radius: 1vh;
+        display: flex;
+        .welcome-l {
+          position: relative;
+          left: 30%;
+          width: 50%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 10px;
+          .hi-wrapper {
+            flex: 3;
+            width: 90%;
+            h1 {
+              font-family: Montserrat;
+              font-style: normal;
+              font-weight: bold;
+              color: #363565;
+              font-size: calc(1vw + 1.5vh);
+            }
+          }
+          .simple-wrapper {
+            flex: 1;
+            width: 90%;
+            p {
+              font-family: Montserrat;
+              font-style: normal;
+              font-weight: normal;
+              font-size: calc(0.5vw + 1vh);
+            }
+          }
+        }
+        .order-n {
+          position: relative;
+          left: 25%;
+          width: 20%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .login-btn {
+            width: 90%;
+            height: 35%;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            background-color: #566AFF;
+            border-radius: 1.25vh;
+            font-size: calc(0.5vw + 1vh);
+            color: white;
+            border-color: white;
+            &:hover, &.active, &:focus {
+                border-color: #474DDC;
+                background-color: #474DDC;
+            }
+          }
+        }
+        .discuss-i {
+          position: absolute;
+          bottom: 20%;
+          left: 4%;
+          width: 15vw;
+          height: 25vh;
+        }
+      }
+    }
+    .section-2 {
+      flex : 3;
+      margin-top: 5vh;
+      background-color: white;
+      border-radius: 1vh;
+      display: flex;
+      flex-direction: column;
+      .in-process-wrapper {
+        flex: 1;
+        padding-left: 1.5vw;
+        display: flex;
+        align-items: center;
+        .in-process {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: bold;
+          font-size: calc(0.8vw + 1vh);
+          color: #363565;
+        }
+      }
+      .content-wrapper {
+        flex: 4;
+        overflow: auto;
+        .process-wrapper {
+          width: 100%;
+          height: 35%;
+          display: flex;
+          padding-left: 1.5vw;
+          padding-bottom: 1vh;
+          &:hover, &:active, &:focus {
+            background-color: yellow;
+          }
+
+          .process {
+            flex: 3;
+            background-color: #697BFC;
+            border-radius: 2vh;
+            display: flex;
+            .info {
+              flex: 1.6;
+              display: flex;
+              flex-direction: column;
+              .name-wrapper {
+                flex: 1;
+                padding-right: 5%;
+                padding-left: 10%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .name {
+                  margin: 0px;
+                  font-family: Montserrat;
+                  font-style: normal;
+                  font-weight: bold;
+                  font-size: calc(0.7vw + 1vh);
+                  color: #FFFF;
+                }
+              }
+              .address-wrapper {
+                flex: 2;
+                padding: 0.1vw 0.1vh;
+                padding-right: 5%;
+                padding-left: 10%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .address {
+                  margin: 0px;
+                  width: 100%;
+                  height: 100%;
+                  font-family: Montserrat;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: calc(0.4vw + 1vh);
+                  color: #FFFF;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
+            }
+            .timeline-wrapper {
+              flex: 2;
+              background-color: #00CD98;
+              border-radius: 2vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .timeline {
+                  flex: 1;
+                  margin: 0px;
+                  width: 100%;
+                  height: 100%;
+                  font-family: Montserrat;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: calc(0.4vw + 1vh);
+                  color: #FFFF;
+                  .number {
+                    padding: 0vw 0.5vh;
+                    font-size: calc(0.5vw + 1vh);
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          } 
+          .status-wrapper {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            .img-wrapper {
+              flex: 1;
+              position: relative;
+              width: 100%;
+              .sent {
+                position: absolute;
+                top: 25%;
+                left: 10%;
+                width: 20%;
+                height: 50%;
+              }
+              .waiting {
+                position: absolute;
+                left: 40%;
+                top: 25%;
+                width: 20%;
+                height: 50%;
+              }
+              .finished {
+                position: absolute;
+                left: 70%;
+                top: 25%;
+                width: 20%;
+                height: 50%;
+              }
+              .next-1 {
+                position: absolute;
+                left: 30%;
+                top: 35%;
+                width: 10%;
+                height: 30%;
+              }
+              .next-2 {
+                position: absolute;
+                left: 61%;
+                top: 35%;
+                width: 10%;
+                height: 30%;
+              }
+            }
+            .notice-wrapper {
+              flex: 1;
+              position: relative;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              .notice {
+                width: 80%;
+                text-align: center;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: bold;
+                color: #F9713D;
+                font-size: calc(0.6vw + 1vh);
+              }
+            }
+          }
+        }
+      }
+    }
+}

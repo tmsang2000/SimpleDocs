@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../../fonts/Montserrat/Montserrat-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  min-height: 100vh;
+  
+}
+
+#customerhome {
+    font-family: 'Montserrat';
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0);
+    display: flex;
+    padding: 4vh;
+    padding-top: 0px;
+    margin: 0px;
+    flex-direction: column;
+    .section-1 {
+      flex: 40;
+      background-color: rgba($color: #000000, $alpha: 0);
+      display: flex;
+      flex-direction: column;
+      .sc1 {
+        flex:1;
+        background-color: rgba($color: #000000, $alpha: 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cus-logo {
+          width: 30vh;
+        }
+      }
+      .sc2 {
+        flex:2;
+        position: relative;
+        background-color: white ;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        // padding: 1vw;
+        p {
+          margin-top: 2vh;
+          margin-left: 2vw;
+          font-size: 2vw;
+        }
+        .ex-area {
+          width: 30%;
+          height: 100%;
+        }
+        .order-n {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .discuss-i {
+            // position: absolute;
+            // top: -10vh;
+            // left: 5vh;
+            height: 10vh;
+            margin-right: 5vw;
+          }
+          .login-btn {
+            // margin-left: 3vw;
+            width: 8vw;
+            height: 7vh;
+            background-color: #22A88E;
+            border-radius: 0.5vh;
+            font-size: 2vh;
+            color: white;
+            border-color: white;
+            &:hover, &.active, &:focus {
+                border-color: #474DDC;
+                background-color: #474DDC;
+            }
+          }
+        }
+       
+      }
+    }
+    .section-2 {
+      flex : 60;
+      margin-top: 5vh;
+      background-color: white;
+      border-radius: 10px;
+      .discuss-i {
+        width: 30vw;
+      }
+    }
+}

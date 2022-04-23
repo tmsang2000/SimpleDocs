@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/Montserrat/Montserrat-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.cus-cont {
+    font-family: 'Montserrat';
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    background-color: #ECECEC;
+    .left-menu-cont {
+        flex: 2;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 2vh;
+        padding-top: 5vh;
+        .sec1 {
+            flex:40;  
+            // background-color: brown;
+            display: flex;
+            justify-content: center;
+        }
+        .sec2 {
+            flex: 60;
+            // background-color: burlywood;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            .item {
+                display: flex;
+                width: 15vw;
+                height: 8vh;
+                // justify-content: center;
+                align-items: center;
+                background-color: #4362F6;
+                margin: 1vw;
+                padding-left: 2vw;
+                border-radius: 10px;
+                img {
+                    width: 1.5vw;
+                    margin-right: 1vw;
+                }
+                p {
+                    color: white;
+                    padding: 0px;
+                    margin: 0px;
+                    font-size: 2.5vh;
+                }
+            }
+            .item-un {
+                display: flex;
+                width: 15vw;
+                height: 8vh;
+                // justify-content: center;
+                align-items: center;
+                background-color: white;
+                margin: 1vw;
+                padding-left: 2vw;
+                border-radius: 10px;
+                border-style: solid;
+                border-width: 2px;
+                border-color: #4362F6;
+                img {
+                    width: 1.5vw;
+                    margin-right: 1vw;
+                }
+                p {
+                    color: #4362F6;
+                    padding: 0px;
+                    margin: 0px;
+                    font-size: 2.5vh;
+                }
+            }
+        }
+
+    }
+    .middle-cont {
+        flex: 6;
+        background-color: #ECECEC;
+    }
+    .right-menu-cont {
+        flex:2;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding-top: 5vh;
+        .sec1 {
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .avatar {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 70%;
+                }
+            }
+            .info {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    font-size: 2vh;
+                }
+                p {
+                    font-size: 2vh;
+                }
+            }
+        }
+        .sec2 {
+            flex:1;
+            display: flex;
+            padding-left: 4vh;
+            padding-right: 4vh;
+            flex-direction: column;;
+            .order {
+                flex:42.5;
+                background-color: #4051CE;
+                border-radius: 10px;
+                display: flex;
+                .icon {
+                    flex: 30;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                
+                }
+                .content {
+                    flex: 70;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: white;
+                    p {
+                        font-size: 2vh;
+                    }
+                    h1 {
+                        font-size: 3vh;
+                    }
+                }
+            }
+            .ex {
+                flex: 15;
+            }
+            .earn {
+                flex:42.5;
+                background-color: #95A1F9;
+                border-radius: 10px;
+                display: flex;
+                .icon {
+                    flex: 30;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                
+                }
+                .content {
+                    flex: 70;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: white;
+                    p {
+                        font-size: 2vh;
+                    }
+                    h1 {
+                        font-size: 3vh;
+                    }
+                }
+            }
+        }
+        .sec3 {
+            flex:2;
+            display: flex;
+            flex-direction: column;
+            .title {
+                flex:3;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                letter-spacing: -0.3px;
+                color: #E65118;
+                font-size: 2vh;
+            }
+            .promo-wrapper {
+                flex:7;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-bottom: 20vh;
+                .promotion {
+                    display: flex;
+                   
+                    .img {
+                        flex: 4;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width:80%;
+                        }
+                    }
+                    .content {
+                        flex: 6;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            
+        }
+    }
+}

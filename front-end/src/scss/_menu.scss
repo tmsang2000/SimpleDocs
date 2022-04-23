@@ -1,0 +1,527 @@
+//
+// menu.scss
+//
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .model-style {
+    background-color: rgba(0,0,0,0);
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('../fonts/Montserrat/Montserrat-SemiBold.ttf');
+  }
+  .model-style {
+    background-color: rgba(0,0,0,0);
+}
+
+#bottomIcon {
+    aside {
+       border-radius: 10px !important;
+       height: 30px !important;
+       position: fixed !important;
+       bottom: 20px !important;
+       width: 30px !important;
+       transition: opacity 0.5s ease-in-out 0s, right 0s ease 0s;
+       cursor: pointer !important;
+       opacity: 1 !important;
+       right: 20px;
+       line-height: 26px !important;
+       background-color: rgb(73, 80, 87) !important;
+       text-align: center;
+       box-shadow: rgba(255, 255, 255, 0.15) 0px 0px 3px;
+       text-align: center;
+       border: none !important;
+       &:hover {
+          background-color: rgb(47, 85, 212) !important;
+       }
+       svg {
+          height: 12px;
+          width: 12px;
+          fill: #FFF;
+       }
+    }
+ } 
+
+#topnav {
+    font-family: 'Montserrat';
+    position: fixed;
+    min-width: 100vw;
+    height: 10%;
+    z-index: 1030;
+    background-color: rgba(255,255,255,0.7);
+    transition: all .5s ease;
+    box-shadow: $shadow;
+    display: flex;
+    .logo-wrapper {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 40%;
+            height: 70%;
+        }
+    }
+    .navigation {
+        flex: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .navigation-menu {
+            list-style: none;
+            margin: 0%;
+            padding: 0%;
+            height: 50%;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            text-align: center;
+            > li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0% 5%;
+                > a {
+                    display: block;
+                    color: $dark;
+                    font-size: calc(0.7vw + 0.7vh);
+                    background-color: transparent !important;
+                    font-weight: 700;
+                    letter-spacing: 0.1%;
+                    text-transform: uppercase;
+                    transition: all 0.5s;    
+                    font-family: "Montserrat";
+                    padding-left: 5%;
+                    padding-right: 5%;
+                    &:hover,
+                    &:active{
+                        color: $primary;    
+                    }
+                }
+            }
+            .has-submenu {
+                .menu-arrow {
+                    border: solid $dark;
+                    border-radius: 0.5px;
+                    border-width: 0 2px 2px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    transition: all 0.5s;
+                    right: -1px;
+                    top: 30px;
+                }
+            }
+        }
+    }  
+    .button {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn-login {
+            font-family: "Montserrat Bold";
+            width: 30%;
+            height: 50%;
+            font-size: calc(0.5vw + 1vh);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20%;
+        }
+        .btn-signup {
+            width: 30%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: calc(0.5vw + 1vh);
+            border-radius: 2vh;
+            background-color: #4B5FF7;
+            color: white;
+            font-family: "Montserrat Bold";
+            letter-spacing: 1%;
+        }
+    }
+    &.scroll {
+        background-color: $white;
+        border: none;
+        box-shadow: $shadow;
+        .navigation-menu {
+            > li {
+                > a {
+                    color: $dark;
+                }
+                
+                > .menu-arrow {
+                    border-color: $dark;
+                }
+                &:hover, &.active {
+                    > a {
+                        color: $primary;
+                    }
+                    > .menu-arrow {
+                        border-color: $primary;
+                    }
+                } 
+            } 
+        }
+    }
+    &.defaultscroll{
+        &.dark-menubar {
+            .logo {
+                line-height: 70px;
+            }
+        }
+        &.scroll {
+            .logo{
+                line-height: 62px;
+            }
+            &.dark-menubar {
+                .logo{
+                    line-height: 62px;
+                }
+            }
+        }
+    }
+}
+
+// @media (min-width: 992px) {
+//     #topnav {
+//         .navigation-menu {
+//             display: flex;
+//             justify-content: center;
+//             > .has-submenu {
+//                 > .submenu {
+//                     > .has-submenu {
+//                         > .submenu {
+//                             &::before{
+//                                 top: 20px;
+//                                 margin-left: -35px;
+//                                 box-shadow: 1px 1px 0px 0px rgba($dark, 0.15);
+//                                 border-color: transparent $white $white transparent;
+//                             }
+//                         }
+//                     } 
+//                 }
+//             } 
+//             > li {
+//                 margin-top: 20px;
+//                 .submenu {
+//                     position: absolute;
+//                     top: 100%;
+//                     left: 0;
+//                     z-index: 1000;
+//                     padding: 15px 0;
+//                     list-style: none;
+//                     min-width: 180px;
+//                     visibility: hidden;
+//                     opacity: 0;
+//                     transition: all .2s ease;
+//                     border-radius: 10px;
+//                     background-color: $white;
+//                     box-shadow: $shadow;
+//                     &:before {
+//                         content: "";
+//                         position: absolute;
+//                         top: 2px;
+//                         left: 45px;
+//                         box-sizing: border-box;
+//                         border: 7px solid $gray-700;
+//                         border-color: transparent transparent $white $white;
+//                         transform-origin: 0 0;
+//                         transform: rotate(135deg);
+//                         box-shadow: -2px 2px 2px -1px rgba($dark, 0.15);
+//                     }
+//                     li {
+//                         position: relative;
+//                         a {
+//                             display: block;
+//                             padding: 10px 20px;
+//                             clear: both;
+//                             white-space: nowrap;
+//                             font-size: 11px;
+//                             text-transform: uppercase;
+//                             letter-spacing: 0.04em;
+//                             font-weight: 700;
+//                             color: $dark !important;
+//                             transition: all 0.3s;
+//                             &:hover {
+//                                 color: $primary !important;
+//                             }
+//                         }
+//                         ul {
+//                             list-style: none;
+//                             padding-left: 0;
+//                             margin: 0;
+//                         }
+//                     }
+//                     &.megamenu {
+//                         white-space: nowrap;
+//                         width: auto;
+//                         > li {
+//                             overflow: hidden;
+//                             min-width: 180px;
+//                             display: inline-block;
+//                             vertical-align: top;
+//                             .submenu {
+//                                 left: 100%;
+//                                 top: 0;
+//                                 margin-left: 10px;
+//                                 margin-top: -1px;
+//                             }
+//                         }
+//                     }
+//                     > li {
+//                         .submenu {
+//                             left: 106%;
+//                             top: 0;
+//                             margin-left: 10px;
+//                             margin-top: -1px;
+//                         }
+//                     }
+//                 }
+//                 > a {
+//                     padding-top: 25px;
+//                     padding-bottom: 25px;
+//                     min-height: 62px;
+//                 }
+//                 &:hover {
+//                     > .menu-arrow {
+//                         border-color: $primary;
+//                     }
+//                 }
+//                 &:hover > a,
+//                 &.active > a{
+//                     color: $primary !important;
+//                 }
+                
+//                 &.last-elements {
+//                     .submenu {
+//                         left: auto;
+//                         right: 0;
+//                         &:before {
+//                             left: auto;
+//                             right: 10px;
+//                         }
+//                         > li.has-submenu .submenu {
+//                             left: auto;
+//                             right: 100%;
+//                             margin-left: 0;
+//                             margin-right: 10px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }        
+//         .navbar-toggle {
+//             display: none;
+//         }
+//         &.scroll {
+//             top: 0;
+//             .navigation-menu {
+//                 > li {
+//                     > a {
+//                         padding-top: 20px;
+//                         padding-bottom: 20px;
+//                     }
+//                 }
+//             }
+//         }
+//         &.scroll-active {
+//             .navigation-menu {
+//                 > li {
+//                     > a {
+//                         padding-top: 25px;
+//                         padding-bottom: 25px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+  
+// @media (max-width: 991px) {
+//     #topnav {
+//         background-color: $white;
+//         box-shadow: $shadow;
+//         min-height: 100px;
+//         .container {
+//             width: auto;
+//         }
+
+//         #navigation{
+//             max-height: 400px;
+//         }
+//         .navigation-menu {
+//             float: none;
+//             > li {
+//                 float: none;
+//                 .submenu {
+//                     display: none;
+//                     list-style: none;
+//                     padding-left: 20px;
+//                     margin: 0;
+//                     li {
+//                         a {
+//                             display: block;
+//                             position: relative;
+//                             padding: 7px 15px;
+//                             text-transform: uppercase;
+//                             font-size: 11px;
+//                             letter-spacing: 0.04em;
+//                             font-weight: 700;
+//                             color: $dark !important;
+//                             transition: all 0.3s;
+//                         }
+//                     }
+//                     &.open {
+//                         display: block;
+//                     }
+//                     .submenu {
+//                         display: none;
+//                         list-style: none;
+//                         &.open {
+//                             display: block;
+//                         }
+//                     }
+//                     &.megamenu {
+//                         > li {
+//                             > ul {
+//                                 list-style: none;
+//                                 padding-left: 0;
+//                                 > li {
+//                                     > span {
+//                                         display: block;
+//                                         position: relative;
+//                                         padding: 10px 15px;
+//                                         text-transform: uppercase;
+//                                         font-size: 12px;
+//                                         letter-spacing: 2px;
+//                                         color: $muted;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//                 > a {
+//                     color: $dark;
+//                     padding: 10px 20px;
+//                     &:after {
+//                         position: absolute;
+//                         right: 15px;
+//                     }
+//                 }
+//             }
+//         }
+//         .navigation-menu > li > a:hover,
+//         .navigation-menu > li .submenu li a:hover,
+//         .navigation-menu > li.has-submenu.open > a {
+//             color: $primary;
+//         }
+//         .menu-extras .menu-item {
+//             border-color: $muted;
+//         }
+//         .navbar-header {
+//             float: left;
+//         }
+//         .buy-button {
+//             .login-btn-primary {
+//                 display: inline-block !important;
+//             }
+//             .login-btn-light {
+//                 display: none;
+//             }
+//         }
+//     }
+//     #topnav {
+//         .has-submenu{
+//             .submenu {
+//                 .submenu-arrow {
+//                     transform: rotate(45deg);
+//                     position: absolute;
+//                     right: 20px;
+//                     top: 12px;
+//                 }
+//             }
+//             &.active {
+//                 a {
+//                     color: $primary;
+//                 }
+//             }
+//         }
+//     }
+
+//     #navigation {
+//         position: absolute;
+//         top: 74px;
+//         left: 0;
+//         width: 100%;
+//         display: none;
+//         height: auto;
+//         padding-bottom: 0;
+//         overflow: auto;
+//         border-top: 1px solid darken($light,2%);
+//         border-bottom: 1px solid darken($light,2%);
+//         background-color: $white;
+//         &.open {
+//             display: block;
+//             overflow-y: auto;
+//         }
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     #topnav {
+//         .navigation-menu {
+//             .has-submenu {
+//                 .menu-arrow {
+//                     right: 16px;
+//                     top: 16px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media (min-width: 768px) {
+//     #topnav {
+//         .navigation-menu {
+//             > li{
+//                 &.has-submenu{
+//                     &:hover {
+//                         > .submenu {
+//                             visibility: visible;
+//                             opacity: 1;
+//                             margin-top: 0;
+//                             > li{
+//                                 &.has-submenu{
+//                                     &:hover {
+//                                         > .submenu {
+//                                             visibility: visible;
+//                                             opacity: 1;
+//                                             margin-left: 0;
+//                                             margin-right: 0;
+//                                         }
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     .navbar-toggle {
+//         display: block;
+//     }
+// }
+

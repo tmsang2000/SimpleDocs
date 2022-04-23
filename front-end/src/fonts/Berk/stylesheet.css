@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Berk';
+    src: url('Berk-Regular.eot');
+    src: url('Berk-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Berk-Regular.woff2') format('woff2'),
+        url('Berk-Regular.woff') format('woff'),
+        url('Berk-Regular.ttf') format('truetype'),
+        url('Berk-Regular.svg#Berk-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Berk Retro';
+    src: url('Berk-Retro.eot');
+    src: url('Berk-Retro.eot?#iefix') format('embedded-opentype'),
+        url('Berk-Retro.woff2') format('woff2'),
+        url('Berk-Retro.woff') format('woff'),
+        url('Berk-Retro.ttf') format('truetype'),
+        url('Berk-Retro.svg#Berk-Retro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Berk Outline';
+    src: url('Berk-Outline.eot');
+    src: url('Berk-Outline.eot?#iefix') format('embedded-opentype'),
+        url('Berk-Outline.woff2') format('woff2'),
+        url('Berk-Outline.woff') format('woff'),
+        url('Berk-Outline.ttf') format('truetype'),
+        url('Berk-Outline.svg#Berk-Outline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
